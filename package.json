@@ -1,0 +1,19 @@
+{
+  "name": "calixto",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nordic-io/calixto.git"
+  },
+  "author": "VitorMendesco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nordic-io/calixto/issues"
+  },
+  "homepage": "https://github.com/nordic-io/calixto#readme"
+}
