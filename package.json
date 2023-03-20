@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/nordic-io/calixto/issues"
   },
-  "homepage": "https://github.com/nordic-io/calixto#readme"
+  "homepage": "https://github.com/nordic-io/calixto#readme",
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "react": "^18.2.0"
+  }
 }
