@@ -2,10 +2,6 @@
   "name": "@nordic/calixto",
   "version": "0.1.0",
   "description": "minimum. wonderful",
-  "main": "dist/index.js",
-  "scripts": {
-    "test": "test"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nordic-io/calixto.git"
@@ -16,12 +12,27 @@
     "url": "https://github.com/nordic-io/calixto/issues"
   },
   "homepage": "https://github.com/nordic-io/calixto#readme",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "rollup": "rollup -c --bundleConfigAsCjs"
+  },
   "peerDependencies": {
     "react": "^18.2.0"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-terser": "^0.4.0",
     "@types/react": "^18.0.28",
     "react": "^18.2.0",
+    "rollup": "^3.20.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.34.1",
     "typescript": "^5.0.2"
   }
 }
