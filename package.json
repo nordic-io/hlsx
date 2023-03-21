@@ -12,6 +12,9 @@
     "url": "https://github.com/nordic-io/calixto/issues"
   },
   "homepage": "https://github.com/nordic-io/calixto#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
