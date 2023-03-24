@@ -1,7 +1,9 @@
-import { PropsWithChildren } from 'react'
+import { ComponentPropsWithoutRef } from 'react'
 
-const Button = ({ children, ...props }: PropsWithChildren) => {
-  return <button {...props}>{children}</button>
+type ButtonProps = ComponentPropsWithoutRef<'button'>
+
+const Button = ({ ...props }: ButtonProps) => {
+  return <button {...props}>AMOMO MO</button>
 }
 
 export default Button
