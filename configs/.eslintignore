@@ -1,0 +1,13 @@
+# dependencies
+../node_modules
+../.husky/
+../public/
+
+# testing
+../coverage
+
+# production
+../dist
+
+# local env files
+../.env

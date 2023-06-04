@@ -17,13 +17,13 @@
     "noEmit": false,
     "jsx": "react-jsx",
     "declaration": true,
-    "declarationDir": "dist"
+    "declarationDir": "./dist"
   },
-  "include": ["src"],
+  "include": ["./src"],
   "exclude": [
-    "dist",
-    "node_modules",
-    "src/**/*.test.tsx",
-    "src/**/*.stories.tsx"
+    "./dist",
+    "./node_modules",
+    "./src/**/*.test.tsx",
+    "./src/**/*.stories.tsx"
   ]
 }

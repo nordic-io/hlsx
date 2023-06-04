@@ -1,4 +1,4 @@
-import { type ButtonType } from './Button.types'
+import type { ButtonType } from './Button.types'
 
 const Button: ButtonType = ({ buttonRef, children, ...props }) => {
   return (
