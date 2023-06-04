@@ -1,10 +1,10 @@
 import commonjs from '@rollup/plugin-commonjs'
 import resolve from '@rollup/plugin-node-resolve'
 import terser from '@rollup/plugin-terser'
+import typescript from '@rollup/plugin-typescript'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
-import typescript from 'rollup-plugin-typescript2'
 
-const packageJson = require('./package.json')
+import packageJson from './package.json'
 
 export default {
   input: 'src/index.ts',
@@ -24,7 +24,8 @@ export default {
     peerDepsExternal(),
     resolve(),
     commonjs(),
-    typescript({ useTsconfigDeclarationDir: true }),
+    typescript({ tsconfig: './tsconfig.json' }),
     terser(),
   ],
+  external: ['react', 'react-dom'],
 }

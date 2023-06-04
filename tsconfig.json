@@ -20,5 +20,10 @@
     "declarationDir": "dist"
   },
   "include": ["src"],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "dist",
+    "node_modules",
+    "src/**/*.test.tsx",
+    "src/**/*.stories.tsx"
+  ]
 }
