@@ -1,0 +1,76 @@
+{
+  "prettier.ignorePath": "./config/.prettierignore",
+  // EDITOR
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.semanticHighlighting.enabled": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll": true
+  },
+  // ESLINT
+  "eslint.format.enable": true,
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "eslint.codeActionsOnSave.mode": "problems",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  // LANGUAGE FORMATTERS
+  "javascipt.preferences.importModuleSpecifier": "non-relative",
+  "[javascript]": {
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  // CSPELL
+  "cSpell.enabled": true,
+  "cSpell.language": "en,pt",
+  "cSpell.ignorePaths": [
+    "**settings.json**",
+    "package-lock.json",
+    "node_modules",
+    "vscode-extension",
+    ".next",
+    ".vscode",
+    ".prettierrc*"
+  ],
+  "cSpell.userWords": ["airbnb", "commitlint", "esnext"],
+  "cSpell.words": [
+    "Esports",
+    "facebook",
+    "hookform",
+    "latin",
+    "notistack",
+    "signup",
+    "Signup",
+    "sockjs",
+    "stompjs"
+  ]
+}
