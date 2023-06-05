@@ -1,12 +1,14 @@
 {
   "name": "@nordic-io/calixto",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "minimum. wonderful",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nordic-io/calixto.git"
   },
-  "author": "VitorMendesco",
+  "author": {
+    "name": "VitorMendesco"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/nordic-io/calixto/issues"
@@ -31,7 +33,8 @@
     "dev": "storybook dev -p 6006",
     "start": "npx serve storybook-static",
     "build": "rollup -c ./configs/rollup.config.ts --bundleConfigAsCjs",
-    "build:storybook": "storybook build",
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_790b424b8613144 skip=true",
     "husky": "husky install",
     "lint": "eslint src/**/*.{ts,tsx} && echo \"eslint: no lint errors\"",
     "lint:fix": "eslint --fix src/**/*.{ts,tsx} && echo \"eslint: no lint errors\"",
@@ -75,6 +78,7 @@
     "@vitest/coverage-c8": "^0.31.4",
     "@vitest/ui": "^0.31.4",
     "baseui": "^12.2.0",
+    "chromatic": "^6.18.0",
     "eslint": "^8.42.0",
     "eslint-plugin-baseui": "^12.2.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -95,5 +99,7 @@
     "typescript": "5.0.4",
     "vite": "^4.3.9",
     "vitest": "^0.31.4"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "@nordic-io/calixto@0.2.0"
 }
