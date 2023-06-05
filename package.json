@@ -28,7 +28,8 @@
   },
   "prettier": "./configs/.prettierrc.json",
   "scripts": {
-    "start": "storybook dev -p 6006",
+    "dev": "storybook dev -p 6006",
+    "start": "npx serve storybook-static",
     "build": "rollup -c ./configs/rollup.config.ts --bundleConfigAsCjs",
     "build:storybook": "storybook build",
     "husky": "husky install",
