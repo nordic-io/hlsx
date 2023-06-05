@@ -1,0 +1,7 @@
+{
+  "**/*.{js,jsx,ts,tsx}": [
+    "eslint",
+    "prettier --c ./configs/.prettierrc.json --write",
+    "vitest related --c ./configs/vitest.config.ts --run --silent"
+  ]
+}
