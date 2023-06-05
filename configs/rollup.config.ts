@@ -21,11 +21,11 @@ export default {
     },
   ],
   plugins: [
+    commonjs(),
     peerDepsExternal(),
     resolve(),
-    commonjs(),
-    typescript({ tsconfig: './tsconfig.json' }),
     terser(),
+    typescript({ tsconfig: './tsconfig.json' }),
   ],
   external: ['react', 'react-dom'],
 }
