@@ -61,16 +61,6 @@
     ".vscode",
     ".prettierrc*"
   ],
-  "cSpell.userWords": ["airbnb", "commitlint", "esnext"],
-  "cSpell.words": [
-    "Esports",
-    "facebook",
-    "hookform",
-    "latin",
-    "notistack",
-    "signup",
-    "Signup",
-    "sockjs",
-    "stompjs"
-  ]
+  "cSpell.userWords": ["commitlint", "esnext"],
+  "cSpell.words": ["autodocs", "lintstagedrc"]
 }

@@ -5,6 +5,7 @@
 
 # production
 /dist/
+/storybook-static/
 
 # local env files
 /.env
