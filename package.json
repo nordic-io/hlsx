@@ -13,7 +13,7 @@
   "bugs": {
     "url": "https://github.com/nordic-io/calixto/issues"
   },
-  "homepage": "https://github.com/nordic-io/calixto#readme",
+  "homepage": "https://main--647d8a398899af1020515762.chromatic.com",
   "publishConfig": {
     "access": "public"
   },
@@ -33,8 +33,8 @@
     "dev": "storybook dev -p 6006",
     "start": "npx serve storybook-static",
     "build": "rollup -c ./configs/rollup.config.ts --bundleConfigAsCjs",
+    "build:watch": "rollup -c ./configs/rollup.config.ts --bundleConfigAsCjs -w",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_790b424b8613144 skip=true",
     "husky": "husky install",
     "lint": "eslint src/**/*.{ts,tsx} && echo \"eslint: no lint errors\"",
     "lint:fix": "eslint --fix src/**/*.{ts,tsx} && echo \"eslint: no lint errors\"",
