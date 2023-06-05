@@ -1,11 +1,9 @@
+import { Button as ButtonUI } from 'baseui/button'
+
 import type { ButtonType } from './Button.types'
 
-const Button: ButtonType = ({ buttonRef, children, variant, ...props }) => {
-  return (
-    <button ref={buttonRef} {...props}>
-      {children}
-    </button>
-  )
+const Button: ButtonType = ({ children, ...props }) => {
+  return <ButtonUI {...props}>{children}</ButtonUI>
 }
 
 export default Button

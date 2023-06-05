@@ -1,8 +1,10 @@
-import { ButtonHTMLAttributes, FC, Ref } from 'react'
+import { FC } from 'react'
 
-export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  buttonRef?: Ref<HTMLButtonElement>
-  variant?: 'primary' | 'secondary' | 'tertiary'
-}
+import { ButtonProps as ButtonPropsUI } from 'baseui/button'
+
+export type ButtonProps = ButtonPropsUI
+// export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+//   buttonRef?: Ref<HTMLButtonElement>
+// }
 
 export type ButtonType = FC<ButtonProps>
