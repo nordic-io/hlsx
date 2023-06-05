@@ -11,7 +11,7 @@ const meta: Meta<typeof Button> = {
 }
 export default meta
 
-export const Sample = (args: ButtonProps) => <Button {...args}>Test</Button>
+export const Sample = (args: ButtonProps) => <Button {...args}>Button</Button>
 Sample.args = {
   type: 'button',
 } as ButtonProps
