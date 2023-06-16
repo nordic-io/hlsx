@@ -46,8 +46,11 @@
     "related": "vitest related --c ./configs/vitest.config.ts --run --silent"
   },
   "peerDependencies": {
+    "baseui": "^12.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "styletron-engine-atomic": "^1.5.0",
+    "styletron-react": "^6.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.5",
@@ -80,7 +83,9 @@
     "baseui": "^12.2.0",
     "chromatic": "^6.18.0",
     "eslint": "^8.42.0",
+    "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-baseui": "^12.2.0",
+    "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-storybook": "^0.6.12",
@@ -99,7 +104,5 @@
     "typescript": "5.0.4",
     "vite": "^4.3.9",
     "vitest": "^0.31.4"
-  },
-  "readme": "ERROR: No README data found!",
-  "_id": "@nordic-io/calixto@0.2.0"
+  }
 }
