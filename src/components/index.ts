@@ -1,2 +1,1 @@
-export * from '../utils/wrappers/stylesWrapper'
-export * from './atoms/button'
+export * from './atoms'
