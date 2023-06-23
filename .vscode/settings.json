@@ -62,5 +62,11 @@
     ".prettierrc*"
   ],
   "cSpell.userWords": ["commitlint", "esnext"],
-  "cSpell.words": ["autodocs", "lintstagedrc"]
+  "cSpell.words": [
+    "autodocs",
+    "baseui",
+    "lintstagedrc",
+    "styletron",
+    "Styletron"
+  ]
 }

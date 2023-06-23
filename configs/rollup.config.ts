@@ -12,20 +12,26 @@ export default {
     {
       file: packageJson.main,
       format: 'cjs',
-      sourcemap: true,
+      sourcemap: true
     },
     {
       file: packageJson.module,
       format: 'esm',
-      sourcemap: true,
-    },
+      sourcemap: true
+    }
   ],
   plugins: [
     commonjs(),
     peerDepsExternal(),
     resolve(),
     terser(),
-    typescript({ tsconfig: './tsconfig.json' }),
+    typescript({ tsconfig: './tsconfig.json' })
   ],
-  external: ['react', 'react-dom'],
+  external: [
+    'baseui',
+    'react',
+    'react-dom',
+    'styletron-engine-atomic',
+    'styletron-react'
+  ]
 }
