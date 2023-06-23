@@ -4,6 +4,7 @@
 /*-lock.json
 
 # production
+/.vercel/
 /dist/
 /storybook-static/
 /coverage/
