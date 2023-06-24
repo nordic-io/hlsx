@@ -1,10 +1,10 @@
 {
   "name": "@nordic-io/calixto",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "description": "minimum. wonderful",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nordic-io/calixto.git"
+    "url": "https://github.com/nordic-io/calixto.git"
   },
   "author": {
     "name": "VitorMendesco"
@@ -13,7 +13,7 @@
   "bugs": {
     "url": "https://github.com/nordic-io/calixto/issues"
   },
-  "homepage": "https://main--647d8a398899af1020515762.chromatic.com",
+  "homepage": "https://calixto.vercel.app",
   "publishConfig": {
     "access": "public"
   },
