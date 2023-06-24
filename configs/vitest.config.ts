@@ -15,11 +15,11 @@ export default defineConfig({
         '**/*.types.ts',
         '**/index.ts',
         '**/*.styles.ts',
-        '**/constants',
-      ],
+        '**/constants'
+      ]
     },
     environment: 'jsdom',
     reporters: ['default'],
-    setupFiles: './configs/setup.vitest.ts',
-  },
+    setupFiles: './configs/setup.vitest.ts'
+  }
 })

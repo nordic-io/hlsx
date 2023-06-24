@@ -7,11 +7,13 @@ import type { ButtonProps } from './Button.types'
 const meta: Meta<typeof Button> = {
   tags: ['autodocs'],
   title: 'Atoms/Button',
-  component: Button,
+  component: Button
 }
 export default meta
 
 export const Sample = (args: ButtonProps) => <Button {...args}>Button</Button>
+
 Sample.args = {
-  type: 'button',
+  onClick: () => null,
+  type: 'button'
 } as ButtonProps
