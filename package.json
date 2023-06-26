@@ -1,6 +1,6 @@
 {
   "name": "@nordic-io/calixto",
-  "version": "0.2.41",
+  "version": "0.2.424",
   "description": "minimum. wonderful",
   "repository": {
     "type": "git",
@@ -17,11 +17,11 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/index.d.ts",
+  "main": "core/index.js",
+  "module": "core/index.esm.js",
+  "types": "core/index.d.ts",
   "files": [
-    "dist"
+    "core"
   ],
   "eslintConfig": {
     "extends": [
@@ -32,8 +32,8 @@
   "scripts": {
     "dev": "storybook dev -p 6006",
     "start": "npx serve storybook-static",
-    "build": "rollup -c ./configs/rollup.config.ts --bundleConfigAsCjs",
-    "build:watch": "rollup -c ./configs/rollup.config.ts --bundleConfigAsCjs -w",
+    "build": "rollup -c ./configs/rollup.config.js --bundleConfigAsCjs",
+    "build:watch": "rollup -c ./configs/rollup.config.js --bundleConfigAsCjs -w",
     "build-storybook": "storybook build",
     "husky": "husky install",
     "lint": "eslint src/**/*.{ts,tsx} && echo \"eslint: no lint errors\"",
@@ -43,7 +43,8 @@
     "watch": "vitest --c ./configs/vitest.config.ts watch --silent",
     "coverage": "vitest --c ./configs/vitest.config.ts run --coverage --silent",
     "ui": "vitest --c ./configs/vitest.config.ts --ui --silent",
-    "related": "vitest related --c ./configs/vitest.config.ts --run --silent"
+    "related": "vitest related --c ./configs/vitest.config.ts --run --silent",
+    "upload": "yarn build && yarn publish"
   },
   "peerDependencies": {
     "baseui": "^12.2.0",
