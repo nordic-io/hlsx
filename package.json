@@ -40,10 +40,10 @@
     "lint:fix": "eslint --fix src/**/*.{ts,tsx} && echo \"eslint: no lint errors\"",
     "lint:staged": "lint-staged -c ./configs/.lintstagedrc",
     "test": "vitest --c ./configs/vitest.config.ts run --silent",
-    "watch": "vitest --c ./configs/vitest.config.ts watch --silent",
-    "coverage": "vitest --c ./configs/vitest.config.ts run --coverage --silent",
-    "ui": "vitest --c ./configs/vitest.config.ts --ui --silent",
-    "related": "vitest related --c ./configs/vitest.config.ts --run --silent",
+    "test:watch": "vitest --c ./configs/vitest.config.ts watch --silent",
+    "test:coverage": "vitest --c ./configs/vitest.config.ts run --coverage --silent",
+    "test:ui": "vitest --c ./configs/vitest.config.ts --ui --silent",
+    "test:related": "vitest related --c ./configs/vitest.config.ts --run --silent",
     "upload": "yarn build && yarn publish"
   },
   "peerDependencies": {

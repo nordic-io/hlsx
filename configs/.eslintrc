@@ -12,32 +12,49 @@
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
-  "plugins": ["react", "baseui", "@typescript-eslint", "storybook", "import"],
+  "plugins": [
+    "react",
+    "baseui",
+    "@typescript-eslint",
+    "storybook",
+    "eslint-plugin-import-helpers"
+  ],
   "settings": {
     "react": {
       "version": "18.2"
-    },
-    "import/resolver": {
-      "alias": {
-        "map": [
-          ["@atoms", "./src/components/atoms"],
-          ["@utils", "./src/utils"]
-        ]
-      }
     }
   },
   "rules": {
-    "semi": ["error", "never"],
-    "quotes": ["error", "single"],
-    "jsx-quotes": ["error", "prefer-double"],
-    "comma-dangle": ["error", "never"],
-    "object-curly-spacing": ["error", "always"],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "/^react/",
+          "/^baseui/",
+          "module",
+          "parent",
+          "sibling",
+          "index",
+          "type",
+          "/styles/"
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": false }
+      }
+    ],
     "arrow-parens": ["error", "as-needed"],
+    "baseui/deprecated-theme-api": "warn",
+    "baseui/deprecated-component-api": "warn",
+    "baseui/no-deep-imports": "warn",
+    "comma-dangle": ["error", "never"],
+    "jsx-quotes": ["error", "prefer-double"],
     "indent": ["error", 2],
-    "react/jsx-indent": ["error", 2],
-    "react/jsx-indent-props": ["error", 2],
+    "object-curly-spacing": ["error", "always"],
+    "quotes": ["error", "single"],
     "react/jsx-boolean-value": ["error", "always"],
     "react/jsx-closing-bracket-location": ["error", "tag-aligned"],
+    "react/jsx-indent": ["error", 2],
+    "react/jsx-indent-props": ["error", 2],
     "react/jsx-wrap-multilines": [
       "error",
       {
@@ -52,8 +69,6 @@
     ],
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
-    "baseui/deprecated-theme-api": "warn",
-    "baseui/deprecated-component-api": "warn",
-    "baseui/no-deep-imports": "warn"
+    "semi": ["error", "never"]
   }
 }

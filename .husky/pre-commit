@@ -4,4 +4,4 @@
 echo ""
 echo "🚨 VERIFYING COMMITED CHANGES..."
 exec >/dev/tty 2>&1 #if you dont use this line, probably the lint log will loop
-yarn lint-staged -c ./configs/.lintstagedrc
+yarn lint:staged
