@@ -6,8 +6,12 @@
 # production
 /.vercel/
 /dist/
+/core/
 /storybook-static/
 /coverage/
 
 # local env files
 /.env
+
+# logs
+yarn-error.log

@@ -55,6 +55,7 @@
   "cSpell.ignorePaths": [
     "**settings.json**",
     "package-lock.json",
+    "yarn-lock.json",
     "node_modules",
     "vscode-extension",
     ".next",
@@ -65,7 +66,11 @@
   "cSpell.words": [
     "autodocs",
     "baseui",
+    "calixto",
     "lintstagedrc",
+    "multilines",
+    "nordic",
+    "parens",
     "styletron",
     "Styletron"
   ]
