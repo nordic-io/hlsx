@@ -1,0 +1,31 @@
+import { createContext, useContext, useMemo, useState } from 'react'
+
+import { DEFAULT_VALUES } from './constants'
+
+import type {
+  {{ pascalCase name }}ContextType,
+  {{ pascalCase name }}ProviderType
+} from './{{ pascalCase name }}Provider.types'
+
+const {{ pascalCase name }}Context = createContext<{{ pascalCase name }}ContextType>(DEFAULT_VALUES)
+
+const use{{ pascalCase name }}Context = () => useContext({{ pascalCase name }}Context)
+
+const {{ pascalCase name }}Provider: {{ pascalCase name }}ProviderType = ({ children }) => {
+  const [content, setContent] = useState(DEFAULT_VALUES.content)
+
+  const handleChangeContent = (value: string) => setContent(value)
+
+  const values: {{ pascalCase name }}ContextType = useMemo(
+    () => ({ content, handleChangeContent }),
+    [content]
+  )
+
+  return (
+    <{{ pascalCase name }}Context.Provider value={values}>
+      {children}
+    </{{ pascalCase name }}Context.Provider>
+  )
+}
+
+export { {{ pascalCase name }}Context, {{ pascalCase name }}Provider, use{{ pascalCase name }}Context }

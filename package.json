@@ -17,6 +17,7 @@
   "publishConfig": {
     "access": "public"
   },
+  "type": "module",
   "main": "core/index.js",
   "module": "core/index.mjs",
   "types": "core/index.d.ts",
@@ -44,6 +45,7 @@
     "test:ui": "vitest --c ./configs/vitest.config.ts --ui --silent",
     "test:watch": "vitest --c ./configs/vitest.config.ts watch --silent",
     "upload": "yarn build && yarn publish",
+    "plop": "plop --plopfile ./scripts/plop/plopfile.js",
     "husky": "husky install"
   },
   "peerDependencies": {

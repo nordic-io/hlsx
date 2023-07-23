@@ -1,0 +1,26 @@
+import { Meta } from '@storybook/react'
+
+import { {{ pascalCase name }} } from './{{ pascalCase name }}'
+
+import type { {{ pascalCase name }}Props } from './{{ pascalCase name }}.types'
+
+const meta: Meta<typeof {{ pascalCase name }}> = {
+  tags: ['autodocs'],
+  title: '{{ pascalCase type }}/{{ pascalCase name }}',
+  component: {{ pascalCase name }},
+  argTypes: {
+    content: {
+      control: 'text',
+      defaultValue: { summary: '' },
+      description: 'Text content to be displayed',
+      type: { name: 'string', required: true }
+    }
+  }
+}
+export default meta
+
+export const Sample = (args: {{ pascalCase name }}Props) => <{{ pascalCase name }} {...args}>Children</{{ pascalCase name }}>
+
+Sample.args = {
+  content: 'Created {{ pascalCase name }}! content test'
+} as {{ pascalCase name }}Props

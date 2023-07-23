@@ -1,0 +1,8 @@
+import type { {{ pascalCase name }}ContextType } from './{{ pascalCase name }}Provider.types'
+
+const DEFAULT_VALUES: {{ pascalCase name }}ContextType = {
+  content: 'default content',
+  handleChangeContent: () => null
+}
+
+export { DEFAULT_VALUES }

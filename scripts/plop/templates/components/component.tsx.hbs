@@ -1,0 +1,35 @@
+import { forwardRef } from 'react'
+
+import { {{ pascalCase name }} as {{ pascalCase name }}UI } from 'baseui/{{ lowerCase name }}'
+
+import {{ pascalCase name }}Overrides from './{{ pascalCase name }}.overrides'
+import use{{ pascalCase name }}Styles from './{{ pascalCase name }}.styles'
+
+import type { {{ pascalCase name }}Type } from './{{ pascalCase name }}.types'
+
+const {{ pascalCase name }}: {{ pascalCase name }}Type = forwardRef(
+  ({ children, content, style, ...props }, ref) => {
+    const classes = use{{ pascalCase name }}Styles()
+
+    const actions = {
+      click: () => alert('{{ pascalCase name }} clicked!')
+    }
+
+    return (
+      <{{ pascalCase name }}UI
+        onClick={actions.click}
+        overrides={ {{ pascalCase name }}Overrides }
+        ref={ref}
+        style=\{{ ...classes.root, ...style }}
+        {...props}
+      >
+        {children}
+        {content}
+      </{{ pascalCase name }}UI>
+    )
+  }
+)
+
+{{ pascalCase name }}.displayName = '{{ pascalCase name }}'
+
+export { {{ pascalCase name }} }

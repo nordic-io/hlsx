@@ -1,0 +1,38 @@
+import { render, screen, waitFor } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+
+import { {{ pascalCase name }}Provider, use{{ pascalCase name }}Context } from './{{ pascalCase name }}Provider'
+
+import { DEFAULT_VALUES } from './constants'
+
+describe('Providers/{{ pascalCase name }}', () => {
+  test('renders elements correctly', async () => {
+    const TestComponent = () => {
+      const { content, handleChangeContent } = use{{ pascalCase name }}Context()
+      
+      return (
+        <input
+          onChange={e => handleChangeContent(e.target.value)}
+          value={content}
+        />
+      )
+    }
+    
+    render(
+      <{{ pascalCase name }}Provider>
+        <TestComponent />
+      </{{ pascalCase name }}Provider>
+    )
+
+    const input = screen.getByRole('textbox')
+
+    await waitFor(async () => {
+      expect(input).toHaveValue(DEFAULT_VALUES.content)
+
+      userEvent.clear(input)
+      await userEvent.type(input, 'new content')
+
+      expect(input).toHaveValue('new content')
+    })
+  })
+})
