@@ -37,6 +37,7 @@
           "parent",
           "sibling",
           "index",
+          "/components|providers|utils/",
           "/constants|styles|overrides/",
           "type"
         ],

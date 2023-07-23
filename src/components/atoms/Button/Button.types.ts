@@ -1,10 +1,9 @@
-import {
+import type { ButtonProps as ButtonPropsUI } from 'baseui/button'
+import type {
   ButtonHTMLAttributes,
   ForwardRefExoticComponent,
   RefAttributes
 } from 'react'
-
-import type { ButtonProps as ButtonPropsUI } from 'baseui/button'
 
 type ButtonProps = ButtonPropsUI & ButtonHTMLAttributes<HTMLButtonElement>
 

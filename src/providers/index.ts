@@ -1,1 +1,1 @@
-export * from './StylesProvider'
+export * from './ThemeProvider'
