@@ -1,24 +1,27 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react'
 
-import { BaseProvider, DarkTheme, LightTheme, Theme } from 'baseui'
+import { BaseProvider, DarkTheme, LightTheme, type Theme } from 'baseui'
 
 import { Client as Styletron } from 'styletron-engine-atomic'
 import { Provider as StyletronProvider } from 'styletron-react'
 
-import { StyleContextType, StylesWrapperType } from './StylesWrapper.types'
+import { DEFAULT_CONTEXT_VALUES } from './constants'
+
+import type {
+  StyleContextType,
+  StylesProviderType
+} from './StylesProvider.types'
 
 const engine = new Styletron()
 
-export const StylesContext = createContext<StyleContextType>({
-  theme: LightTheme,
-  toggleTheme: () => undefined
-})
+const StylesContext = createContext<StyleContextType>(DEFAULT_CONTEXT_VALUES)
 
-export const useStyles = () => useContext(StylesContext)
+const useStylesProvider = () => useContext(StylesContext)
 
-export const StylesWrapper: StylesWrapperType = ({
+const StylesProvider: StylesProviderType = ({
   children,
-  controlledTheme
+  controlledTheme,
+  styletronEngine = engine
 }) => {
   const [theme, setTheme] = useState<Theme>(controlledTheme || LightTheme)
 
@@ -38,9 +41,11 @@ export const StylesWrapper: StylesWrapperType = ({
 
   return (
     <StylesContext.Provider value={values}>
-      <StyletronProvider value={engine}>
+      <StyletronProvider value={styletronEngine}>
         <BaseProvider theme={theme}>{children}</BaseProvider>
       </StyletronProvider>
     </StylesContext.Provider>
   )
 }
+
+export { StylesContext, StylesProvider, useStylesProvider }
