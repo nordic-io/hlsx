@@ -36,8 +36,8 @@
           "parent",
           "sibling",
           "index",
-          "type",
-          "/styles/"
+          "/constants|styles|overrides/",
+          "type"
         ],
         "alphabetize": { "order": "asc", "ignoreCase": false }
       }

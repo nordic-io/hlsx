@@ -1,25 +1,26 @@
-import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vitest/config'
 
+import { VITE_RESOLVE_ALIASES } from './constants'
+
 export default defineConfig({
-  plugins: [react()],
   test: {
-    env: {},
-    alias: {},
+    alias: VITE_RESOLVE_ALIASES,
     coverage: {
-      all: true,
       src: ['src'],
       exclude: [
-        '__mocks__',
         '**/*.d.ts',
-        '**/*.types.ts',
-        '**/index.ts',
-        '**/*.styles.ts',
-        '**/constants'
+        '**/*.types.{ts,tsx}',
+        '**/*.stories.{ts,tsx}',
+        '**/*.overrides.{ts,tsx}',
+        '**/*.styles.{ts,tsx}',
+        '**/index.{ts,tsx}',
+        '**/constants.{ts,tsx}'
       ]
     },
+    env: {},
     environment: 'jsdom',
+    globals: true,
     reporters: ['default'],
-    setupFiles: './configs/setup.vitest.ts'
+    setupFiles: ['./configs/setup.vitest.ts']
   }
 })
