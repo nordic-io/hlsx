@@ -1,8 +1,6 @@
-import React from 'react'
-
 import { Meta } from '@storybook/react'
 
-import Button from './Button'
+import { Button } from './Button'
 
 import type { ButtonProps } from './Button.types'
 
@@ -16,6 +14,5 @@ export default meta
 export const Sample = (args: ButtonProps) => <Button {...args}>Button</Button>
 
 Sample.args = {
-  onClick: () => null,
-  type: 'button'
+  type: 'submit'
 } as ButtonProps
