@@ -30,6 +30,7 @@
       {
         "newlinesBetween": "always",
         "groups": [
+          "/^vitest/",
           "/^react/",
           "/^baseui/",
           "module",

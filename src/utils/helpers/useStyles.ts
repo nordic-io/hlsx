@@ -1,4 +1,4 @@
-import { Theme, useStyletron } from 'baseui'
+import { useStyletron, type Theme } from 'baseui'
 
 import type { CSSProperties } from 'react'
 
