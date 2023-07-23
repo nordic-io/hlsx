@@ -19,14 +19,18 @@
     "baseUrl": "./.",
     "paths": {
       "@atoms/*": ["./src/components/atoms/*"],
+      "@components/*": ["./src/components/*"],
+      "@index/*": ["./src/*"],
+      "@providers/*": ["./src/providers/*"],
       "@utils/*": ["./src/utils/*"]
     }
   },
-  "include": ["./src"],
+  "include": ["./src", "./.storybook/preview.tsx"],
   "exclude": [
-    "./dist",
+    "./core",
+    "./coverage",
     "./node_modules",
-    "./src/**/*.test.tsx",
-    "./src/**/*.stories.tsx"
+    "./storybook-static",
+    "./vercel"
   ]
 }
