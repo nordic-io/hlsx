@@ -27,7 +27,8 @@ export default defineConfig({
           include: ['src/**/*'],
           exclude: ['**/*.stories.{ts,tsx}', '**/*.test.{tx,tsx}']
         })
-      ]
+      ],
+      treeshake: 'recommended'
     },
     ssr: true
   },

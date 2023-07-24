@@ -1,8 +1,7 @@
-import { StylesProvider } from '../src/providers'
+import { DARK_THEME, LIGHT_THEME } from '@utils/constants'
+import { ThemeProvider } from '../src/providers'
 
 import type { Preview } from '@storybook/react'
-
-import { DarkTheme, LightTheme } from 'baseui'
 
 const preview: Preview = {
   decorators: [
@@ -28,9 +27,9 @@ const preview: Preview = {
                   width: '50%'
                 }}
               >
-                <StylesProvider controlledTheme={LightTheme}>
+                <ThemeProvider startupTheme={LIGHT_THEME}>
                   <Story />
-                </StylesProvider>
+                </ThemeProvider>
               </div>
               <div
                 style={{
@@ -41,20 +40,20 @@ const preview: Preview = {
                   width: '50%'
                 }}
               >
-                <StylesProvider controlledTheme={DarkTheme}>
+                <ThemeProvider startupTheme={DARK_THEME}>
                   <Story />
-                </StylesProvider>
+                </ThemeProvider>
               </div>
             </div>
           )
         }
         default: {
           return (
-            <StylesProvider
-              controlledTheme={theme === 'dark' ? DarkTheme : LightTheme}
+            <ThemeProvider
+              startupTheme={theme === 'light' ? LIGHT_THEME : DARK_THEME}
             >
               <Story />
-            </StylesProvider>
+            </ThemeProvider>
           )
         }
       }

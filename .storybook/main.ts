@@ -8,7 +8,8 @@ const config: StorybookConfig = {
     '@storybook/addon-interactions'
   ],
   framework: {
-    name: '@storybook/react-vite'
+    name: '@storybook/react-vite',
+    options: {}
   },
   docs: {
     autodocs: 'tag'
