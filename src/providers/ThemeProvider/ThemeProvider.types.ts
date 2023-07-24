@@ -1,5 +1,7 @@
-import type { Theme } from 'baseui'
 import type { FC, PropsWithChildren } from 'react'
+
+import type { Theme } from 'baseui'
+
 import type { StandardEngine } from 'styletron-standard'
 
 type ThemeContextType = {

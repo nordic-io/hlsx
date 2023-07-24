@@ -1,18 +1,20 @@
-import { Meta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
 import { Button } from './Button'
+import type { ButtonProps, ButtonType } from './Button.types'
 
-import type { ButtonProps } from './Button.types'
-
-const meta: Meta<typeof Button> = {
+const meta: Meta<ButtonType> = {
   tags: ['autodocs'],
   title: 'Atoms/Button',
   component: Button
 }
 export default meta
 
-export const Sample = (args: ButtonProps) => <Button {...args}>Button</Button>
+type Story = StoryObj<ButtonType>
 
+export const Sample: Story = (args: ButtonProps) => (
+  <Button {...args}>Button</Button>
+)
 Sample.args = {
   type: 'submit'
 } as ButtonProps

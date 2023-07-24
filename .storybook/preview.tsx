@@ -1,5 +1,5 @@
-import { DARK_THEME, LIGHT_THEME } from '@utils/constants'
 import { ThemeProvider } from '../src/providers'
+import { DARK_THEME, LIGHT_THEME } from '../src/utils/constants'
 
 import type { Preview } from '@storybook/react'
 
@@ -34,7 +34,7 @@ const preview: Preview = {
               <div
                 style={{
                   alignItems: 'center',
-                  backgroundColor: '#333',
+                  backgroundColor: DARK_THEME.colors.backgroundSecondary,
                   display: 'flex',
                   justifyContent: 'center',
                   width: '50%'
@@ -48,11 +48,22 @@ const preview: Preview = {
           )
         }
         default: {
+          const startupTheme = theme === 'light' ? LIGHT_THEME : DARK_THEME
+
           return (
-            <ThemeProvider
-              startupTheme={theme === 'light' ? LIGHT_THEME : DARK_THEME}
-            >
-              <Story />
+            <ThemeProvider startupTheme={startupTheme}>
+              <div
+                style={{
+                  alignItems: 'center',
+                  backgroundColor: startupTheme.colors.backgroundSecondary,
+                  display: 'flex',
+                  justifyContent: 'center',
+                  minHeight: '96vh',
+                  width: '96vw'
+                }}
+              >
+                <Story />
+              </div>
             </ThemeProvider>
           )
         }
@@ -78,6 +89,7 @@ const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
+      hideNoControlsWarning: true,
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/

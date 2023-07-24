@@ -2,10 +2,11 @@ import { forwardRef } from 'react'
 
 import { {{ pascalCase name }} as {{ pascalCase name }}UI } from 'baseui/{{ lowerCase name }}'
 
+import type { {{ pascalCase name }}Type } from './{{ pascalCase name }}.types'
+
 import {{ pascalCase name }}Overrides from './{{ pascalCase name }}.overrides'
 import use{{ pascalCase name }}Styles from './{{ pascalCase name }}.styles'
 
-import type { {{ pascalCase name }}Type } from './{{ pascalCase name }}.types'
 
 const {{ pascalCase name }}: {{ pascalCase name }}Type = forwardRef(
   ({ children, content, style, ...props }, ref) => {

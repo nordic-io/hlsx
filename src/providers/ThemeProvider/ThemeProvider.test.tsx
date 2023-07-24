@@ -1,9 +1,9 @@
 import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
-import { ThemeProvider, useThemeContext } from './ThemeProvider'
-
 import { DARK_THEME, LIGHT_THEME } from '@utils/constants'
+
+import { ThemeProvider, useThemeContext } from './ThemeProvider'
 
 describe('Providers/Theme', () => {
   it('should renders children correctly', () => {

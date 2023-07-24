@@ -1,10 +1,13 @@
 import { render, screen } from '@testing-library/react'
 
 import { Sample } from './Button.stories'
+import type { ButtonType } from './Button.types'
+
+const SampleComponent = Sample as ButtonType
 
 describe('Atoms/Button', () => {
   it('should render correctly', () => {
-    render(<Sample {...Sample.args} />)
+    render(<SampleComponent {...Sample.args} />)
     expect(screen.getByRole('button')).toBeInTheDocument()
   })
 })

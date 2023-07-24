@@ -1,11 +1,11 @@
 import { createContext, useContext, useMemo, useState } from 'react'
 
-import { DEFAULT_VALUES } from './constants'
-
 import type {
   {{ pascalCase name }}ContextType,
   {{ pascalCase name }}ProviderType
 } from './{{ pascalCase name }}Provider.types'
+
+import { DEFAULT_VALUES } from './constants'
 
 const {{ pascalCase name }}Context = createContext<{{ pascalCase name }}ContextType>(DEFAULT_VALUES)
 

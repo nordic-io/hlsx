@@ -1,4 +1,4 @@
-import { createContext, useContext, useMemo, useState } from 'react'
+import { createContext, useContext, useEffect, useMemo, useState } from 'react'
 
 import { BaseProvider } from 'baseui'
 
@@ -7,9 +7,9 @@ import { Provider as StyletronProvider } from 'styletron-react'
 
 import { DARK_THEME, LIGHT_THEME } from '@utils/constants'
 
-import { DEFAULT_VALUES } from './constants'
-
 import type { ThemeContextType, ThemeProviderType } from './ThemeProvider.types'
+
+import { DEFAULT_VALUES } from './constants'
 
 const engine = new Styletron()
 
@@ -34,6 +34,11 @@ const ThemeProvider: ThemeProviderType = ({
     () => ({ theme, toggleTheme, setTheme }),
     [theme]
   )
+
+  useEffect(() => {
+    if (startupTheme === theme) return
+    setTheme(startupTheme)
+  }, [startupTheme])
 
   return (
     <ThemeContext.Provider value={values}>

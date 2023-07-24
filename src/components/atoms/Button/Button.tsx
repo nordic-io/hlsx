@@ -2,20 +2,13 @@ import { forwardRef } from 'react'
 
 import { Button as ButtonUI } from 'baseui/button'
 
-import ButtonOverrides from './Button.overrides'
-
 import type { ButtonType } from './Button.types'
 
-const Button: ButtonType = forwardRef(({ children, style, ...props }, ref) => {
+import ButtonOverrides from './Button.overrides'
+
+const Button: ButtonType = forwardRef(({ children, ...props }, ref) => {
   return (
-    <ButtonUI
-      overrides={ButtonOverrides}
-      ref={ref}
-      style={{
-        ...style
-      }}
-      {...props}
-    >
+    <ButtonUI overrides={ButtonOverrides} ref={ref} {...props}>
       {children}
     </ButtonUI>
   )

@@ -1,7 +1,6 @@
-import { useStyletron, type Theme } from 'baseui'
-
 import type { CSSProperties } from 'react'
 
+import { useStyletron, type Theme } from 'baseui'
 const useStyles = <T extends Record<string, CSSProperties>>(
   styles: (theme: Theme) => T
 ) => {
@@ -11,4 +10,5 @@ const useStyles = <T extends Record<string, CSSProperties>>(
     ...classes
   }
 }
+
 export { useStyles }
