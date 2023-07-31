@@ -1,1 +1,5 @@
-export * from './dist'
+export * from './components'
+export * from './providers'
+export * from './utils'
+
+export * from './baseui'

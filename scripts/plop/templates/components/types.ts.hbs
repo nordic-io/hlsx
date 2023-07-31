@@ -1,0 +1,15 @@
+import type { {{ pascalCase name }}Props as {{ pascalCase name }}PropsUI } from 'baseui/{{ lowerCase name }}'
+
+import type {
+  {{ pascalCase name }}HTMLAttributes,
+  ForwardRefExoticComponent,
+  RefAttributes
+} from 'react'
+
+type {{ pascalCase name }}Props = {{ pascalCase name }}PropsUI &
+  {{ pascalCase name }}HTMLAttributes<HTML{{ pascalCase name }}Element> &
+  RefAttributes<HTML{{ pascalCase name }}Element></HTML>
+
+type {{ pascalCase name }}Type = ForwardRefExoticComponent<{{ pascalCase name }}Props >
+
+export type { {{ pascalCase name }}Props, {{ pascalCase name }}Type }

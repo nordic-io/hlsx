@@ -1,13 +1,13 @@
-import React from 'react'
-
 import { render, screen } from '@testing-library/react'
-import { describe, expect, it } from 'vitest'
 
 import { Sample } from './Button.stories'
+import type { ButtonType } from './Button.types'
+
+const SampleComponent = Sample as ButtonType
 
 describe('Atoms/Button', () => {
   it('should render correctly', () => {
-    render(<Sample {...Sample.args} />)
+    render(<SampleComponent {...Sample.args} />)
     expect(screen.getByRole('button')).toBeInTheDocument()
   })
 })

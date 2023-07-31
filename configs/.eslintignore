@@ -7,7 +7,7 @@
 ../coverage
 
 # production
-../dist
+../core
 
 # local env files
 ../.env

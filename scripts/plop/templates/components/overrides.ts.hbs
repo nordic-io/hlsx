@@ -1,0 +1,14 @@
+import type { Theme } from 'baseui'
+import type { {{ pascalCase name }}Overrides } from 'baseui/{{ lowerCase name }}'
+import type { StyleObject } from 'styletron-react'
+
+const {{ pascalCase name }}Overrides: {{ pascalCase name }}Overrides = {
+  Base{{ pascalCase name }}: {
+    style: ({ $theme }: { $theme: Theme }) =>
+      ({
+        borderRadius: $theme.borders.radius300
+      }) as StyleObject
+  }
+}
+
+export default {{ pascalCase name }}Overrides

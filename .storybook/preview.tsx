@@ -1,8 +1,7 @@
-import type { Preview } from '@storybook/react'
-import { DarkTheme, LightTheme } from 'baseui'
-import React from 'react'
+import { ThemeProvider } from '../src/providers'
+import { DARK_THEME, LIGHT_THEME } from '../src/utils/constants'
 
-import { StylesWrapper } from '../src/utils'
+import type { Preview } from '@storybook/react'
 
 const preview: Preview = {
   decorators: [
@@ -28,33 +27,44 @@ const preview: Preview = {
                   width: '50%'
                 }}
               >
-                <StylesWrapper controlledTheme={LightTheme}>
+                <ThemeProvider startupTheme={LIGHT_THEME}>
                   <Story />
-                </StylesWrapper>
+                </ThemeProvider>
               </div>
               <div
                 style={{
                   alignItems: 'center',
-                  backgroundColor: '#333',
+                  backgroundColor: DARK_THEME.colors.backgroundSecondary,
                   display: 'flex',
                   justifyContent: 'center',
                   width: '50%'
                 }}
               >
-                <StylesWrapper controlledTheme={DarkTheme}>
+                <ThemeProvider startupTheme={DARK_THEME}>
                   <Story />
-                </StylesWrapper>
+                </ThemeProvider>
               </div>
             </div>
           )
         }
         default: {
+          const startupTheme = theme === 'light' ? LIGHT_THEME : DARK_THEME
+
           return (
-            <StylesWrapper
-              controlledTheme={theme === 'dark' ? DarkTheme : LightTheme}
-            >
-              <Story />
-            </StylesWrapper>
+            <ThemeProvider startupTheme={startupTheme}>
+              <div
+                style={{
+                  alignItems: 'center',
+                  backgroundColor: startupTheme.colors.backgroundSecondary,
+                  display: 'flex',
+                  justifyContent: 'center',
+                  minHeight: '96vh',
+                  width: '96vw'
+                }}
+              >
+                <Story />
+              </div>
+            </ThemeProvider>
           )
         }
       }
@@ -79,6 +89,7 @@ const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
+      hideNoControlsWarning: true,
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/

@@ -1,0 +1,12 @@
+import type { FC, PropsWithChildren } from 'react'
+
+type {{ pascalCase name }}ContextType = {
+  content: string
+  handleChangeContent: (value: string) => void
+}
+
+type {{ pascalCase name }}ProviderProps = PropsWithChildren<unknown>
+
+type {{ pascalCase name }}ProviderType = FC<{{ pascalCase name }}ProviderProps>
+
+export type { {{ pascalCase name }}ContextType, {{ pascalCase name }}ProviderProps, {{ pascalCase name }}ProviderType }

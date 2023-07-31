@@ -1,0 +1,14 @@
+import { render, screen } from '@testing-library/react'
+
+import { Sample } from './{{ pascalCase name }}.stories'
+import type { {{ pascalCase name }}Type } from './{{ pascalCase name }}.types'
+
+const SampleComponent = Sample as {{ pascalCase name }}Type
+
+describe('{{ pascalCase type }}/{{ pascalCase name }}', () => {
+  it('should renders elements correctly', () => {
+    render(<SampleComponent {...Sample.args} />)
+
+    expect(screen.getByText(/Created {{ pascalCase name }}! content test/gi)).toBeInTheDocument()
+  })
+})

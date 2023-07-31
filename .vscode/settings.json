@@ -67,11 +67,15 @@
     "autodocs",
     "baseui",
     "calixto",
+    "chromaui",
     "lintstagedrc",
     "multilines",
     "nordic",
     "parens",
+    "plopfile",
     "styletron",
-    "Styletron"
+    "Styletron",
+    "testid",
+    "treeshake"
   ]
 }

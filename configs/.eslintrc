@@ -30,14 +30,16 @@
       {
         "newlinesBetween": "always",
         "groups": [
+          "/^type/",
+          "/^vitest/",
           "/^react/",
           "/^baseui/",
           "module",
+          "/components|providers|utils/",
           "parent",
           "sibling",
           "index",
-          "type",
-          "/styles/"
+          "/constants|styles|overrides/"
         ],
         "alphabetize": { "order": "asc", "ignoreCase": false }
       }
